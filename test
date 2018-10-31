@@ -1,0 +1,18 @@
+dir=$( cd $(dirname "${BASH_SOURCE[0]}") && pwd )
+
+classdir="$dir/classes"
+source_path="$dir/src"
+source_files="\"$dir/src/com/mockr/Puppy.java\" \"$dir/tst/com/mockr/PuppyTest.java\""
+cmd="javac -d \"$classdir\" -cp \"$source_path\" $source_files"
+echo $cmd
+eval $cmd
+
+classes="com.mockr.PuppyTest"
+cmd="java -cp \"$classdir\" $classes"
+echo $cmd
+
+echo ''
+echo '================ Starting Tests ================'
+echo ''
+
+eval $cmd

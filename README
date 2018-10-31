@@ -1,0 +1,4 @@
+Barebones java exploration of Junit and Mockito
+
+To start, run
+`source ./test`

@@ -1,0 +1,8 @@
+dir=$( cd $(dirname "${BASH_SOURCE[0]}") && pwd )
+
+classdir="$dir/classes"
+classpath="$dir/src"
+source_files="$dir/src/com/mockr/Puppy.java"
+cmd="javac -d \"$classdir\" -cp \"$classpath\" \"$source_files\""
+echo $cmd
+eval $cmd
